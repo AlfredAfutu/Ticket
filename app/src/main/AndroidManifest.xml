@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.ticket.tiqeet">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-sdk tools:overrideLibrary="com.facebook" />
+
+    <application
+        android:name="com.ticket.tiqeet.Utils.TiqeetApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        >
+        <activity
+            android:name="com.ticket.tiqeet.Activities.LoginActivity"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Black.NoTitleBar">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.ticket.tiqeet.Activities.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/CustomActionBarTheme">
+
+            <intent-filter>
+                <action android:name=".MainActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
+    </application>
+
+</manifest>
